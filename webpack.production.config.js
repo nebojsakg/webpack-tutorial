@@ -53,10 +53,18 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      filename: 'hello-worl.html',
+      chunks: ['hello-world'],
       title: 'Hello world',
-      // filename: 'subfolder/custom_filename.html',
-      template: 'src/index.hbs',
-      description: 'Some description'
+      template: 'src/page-template.hbs',
+      description: 'Hello World'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'kiwi.html',
+      chunks: ['kiwi'],
+      title: 'Kiwi',
+      template: 'src/page-template.hbs',
+      description: 'Kiwi'
     })
   ]
 };
